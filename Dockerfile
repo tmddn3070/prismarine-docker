@@ -5,9 +5,7 @@ ENV Prismarine_get_url=$Prismarine_url
 
 WORKDIR /data
 
-ADD ${Prismarine_url} Prismarine-paperclip-1.18.2-R0.1-SNAPSHOT-reobf.jar
-
-RUN wget 
+RUN wget ${Prismarine_url} Prismarine-paperclip-1.18.2-R0.1-SNAPSHOT-reobf.jar
 
 WORKDIR /data
 
