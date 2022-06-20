@@ -11,8 +11,6 @@ RUN wget
 
 WORKDIR /data
 
-COPY --from=build /opt/minecraft/purpur.jar /opt/minecraft/purpur.jar
-
 VOLUME "/data"
 
 EXPOSE 25565/tcp
@@ -28,4 +26,4 @@ ENV JAVAFLAGS=$java_flags
 
 WORKDIR /data
 
-ENTRYPOINT /usr/local/openjdk-16/bin/java -jar -Xms$MEMORYSIZE -Xmx$MEMORYSIZE $JAVAFLAGS /opt/prismarine/Prismarine-paperclip-1.18.2-R0.1-SNAPSHOT-reobf.jar --nojline nogui
+ENTRYPOINT java -Xms$MEMORYSIZE -Xmx$MEMORYSIZE $JAVAFLAGS -jar /data/Prismarine-paperclip-1.18.2-R0.1-SNAPSHOT-reobf.jar --nojline nogui
