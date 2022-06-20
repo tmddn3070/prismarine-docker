@@ -15,8 +15,6 @@ VOLUME "/data"
 
 EXPOSE 25565/tcp
 EXPOSE 25565/udp
-//EXPOSE 30001/tcp bungeecord
-//EXPOSE 30001/udp
 
 ARG memory_size=1G
 ENV MEMORYSIZE=$memory_size
